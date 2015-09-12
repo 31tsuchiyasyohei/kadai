@@ -12,20 +12,18 @@
         </h2>
         <article class="news-detail">
             <dl class="clearfix">
-                <?php
+<?php
 $pdo = new PDO("mysql:host=localhost;dbname=cs_academy;charset=utf8", "root", "");
-$sql = "SELECT * FROM news";
+$sql = "SELECT news_title,create_date FROM news";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                var_dump($results);
-                foreach($results as $row) {
-	            var_dump($row);
-                echo '<dt class="news-date">'$row['create_date']'</dt>';
-                echo '<dd class="news-description">'$row['news_title'];
-                }
-                 $pdo = null;
-                 ?>
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);   
+            foreach($results as $row) {
+                echo $row['create_date']<br/>;
+                echo $row['news_title'];
+                };
+ $pdo = null;
+            ?>
             </dl>
             <p class="view-detail text-right"><a href="#">ニュース一覧を見る</a></p>
         </article>
