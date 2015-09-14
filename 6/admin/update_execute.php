@@ -1,18 +1,17 @@
 <?php
-$id = $_POST["id"];
-$name = $_POST["name"];
-$email = $_POST["email"];
-$age = $_POST["age"];
+$id = $_POST["news_id"];
+$title = $_POST["title"];
+$detail = $_POST["detail"];
+$author = $_POST["author"];
 
 $pdo = new PDO("mysql:host=localhost;dbname=cs_academy;charset=utf8", "root", "");
-$sql = "UPDATE news set name = '" . $name . "', email = '" . $email . "', age = " . $age . ", update_date = sysdate() " . "WHERE id = " . $id;
-var_dump($sql);
+$sql = "UPDATE news set news_title = '" . $title . "', news_detail = '" . $detail . "', author = " . $author . ", update_date = sysdate() " . "WHERE news_id = " . $id;
 $stmt = $pdo->prepare($sql);
 $result = $stmt->execute();
-var_dump($result);
+
 if($result) {
 	echo "データが更新できました";
-	echo "<a href=select.php>一覧へ</a>";
+	echo "<a href=news_list.php>一覧へ</a>";
 } else {
 	echo "データの登録に失敗しました";
 }
