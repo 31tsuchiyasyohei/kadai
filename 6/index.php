@@ -19,9 +19,10 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);   
             foreach($results as $row) {
-                echo $row['create_date']<br/>;
-                echo $row['news_title'];
+                echo "<dd>". $row['create_date'] ."</dd>";
+                echo "<dd>".$row['news_title'] ."</dd>";
                 };
+
  $pdo = null;
             ?>
             </dl>
