@@ -12,7 +12,7 @@ foreach($results as $row) {
 	$title = $row["news_title"];
 	$detail = $row["news_detail"];
 	$author = $row["author"];
-}
+};
 $pdo = null;
 ?>
 <html>

@@ -14,19 +14,19 @@
             <dl class="clearfix">
 <?php
 $pdo = new PDO("mysql:host=localhost;dbname=cs_academy;charset=utf8", "root", "");
-$sql = "SELECT news_title,create_date FROM news";
+$sql = "SELECT *FROM news";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);   
             foreach($results as $row) {
                 echo "<dd>". $row['create_date'] ."</dd>";
-                echo "<dd>".$row['news_title'] ."</dd>";
+                echo "<dd>". mb_substr($row['news_title'],0,10) ."</dd>";
                 };
 
  $pdo = null;
             ?>
             </dl>
-            <p class="view-detail text-right"><a href="#">ニュース一覧を見る</a></p>
+            <p class="view-detail text-right"><a href="admin/news_list.php">ニュース一覧を見る</a></p>
         </article>
     </section>
    
