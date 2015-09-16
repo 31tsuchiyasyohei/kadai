@@ -4,10 +4,10 @@ $sql = "SELECT * FROM news";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+$view = "";
 foreach($results as $row) {
 
-$view = "";
+
 	$view .= "<table>";
 
 	$view .= "<tr>";

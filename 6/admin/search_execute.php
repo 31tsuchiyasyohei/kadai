@@ -1,7 +1,7 @@
 <?php
 $id = $_GET["id"];
 $pdo = new PDO("mysql:host=localhost;dbname=cs_academy;charset=utf8", "root", "");
-$sql = "SELECT * FROM news WHERE id = " . $id;
+$sql = "SELECT * FROM news WHERE news_id = " . $id;
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -14,8 +14,8 @@ $view .= "<table>";
 foreach($results as $row) {
 //	var_dump($row);
 	$view .= "<tr>";
-	$view .= "<td><a href=update.php?id=" . $row["id"] . ">" . $row["id"] . "</a></td>";
-	$view .=  "<td><a href=update.php?id=" . $row["id"] . ">" . $row["name"] . "</a></td>";
+	$view .= "<td><a href=update.php?id=" . $row["news_id"] . ">" . $row["news_id"] . "</a></td>";
+	$view .=  "<td><a href=update.php?id=" . $row["news_title"] . ">" . $row["news_title"] . "</a></td>";
 	$view .= "</tr>";
 }
 // table閉じタグで終了
