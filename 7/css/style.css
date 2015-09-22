@@ -1,0 +1,52 @@
+#matome{
+    margin:0 auto;
+
+        text-align: left;
+}
+.head{float:left;
+    width:547px;
+    font-family: cursive;
+    margin-left: 50px;
+    letter-spacing: 2px;
+}
+.loginout{float:left;
+ 
+}
+.log{ float:left;
+    block;  
+}
+
+#top{clear:both;
+margin:0 auto;
+}
+
+ul{
+margin-left:0;
+padding-left:0;
+list-style-type:none;
+width:960px;
+border-top:1px solid #cccccc;
+border-bottom:1px solid #cccccc;
+border-left:1px solid #cccccc;
+}
+
+li{
+float:left;
+width:120px;
+}
+
+a{
+display:block;
+padding-top:10px;
+padding-bottom:10px;
+border-right:1px solid #cccccc;
+text-align:center;
+text-decoration:none;
+background-color:#eeeeee;
+color:#555555;
+width:120px;
+}
+
+a:hover{
+background-color:#aaaaaa;
+}
