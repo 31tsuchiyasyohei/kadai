@@ -1,3 +1,6 @@
+<?php 
+echo $_SESSION["register_id"];
+?>
 <!DOCTYPE html>
 <html>
 <head>

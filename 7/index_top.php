@@ -1,6 +1,8 @@
-<?php include("header.php"); ?> 
+<?php 
+session_start();
+include("header.php"); ?> 
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=cs_academy;charset=utf8", "root", "");
+$pdo = new PDO("mysql:host=localhost;dbname=tsuchiya0909_test;charset=utf8", "tsuchiya0909", "test0909");
 $sql = "SELECT *FROM news";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
@@ -11,8 +13,8 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 	$view .= "<tr>";
     $view .= "<td>" . $row["create_date"] . "</td>";
-	$view .= "<td>" . $row["news_title"] . "</td>";
-	$view .= "<td>" . $row["news_detail"] . "</td>";
+	$view .= "<td>" . mb_substr($row['news_title'],0,10) . "</td>";
+	$view .= "<td>" . mb_substr($row['news_detail'],0,40) . "</td>";
     $view .= "</tr>";
     $view .= "</table>";
                 };

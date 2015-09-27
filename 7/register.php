@@ -8,7 +8,7 @@ session_start();
 <head>
 </head>
 <body>
-<form action="register_execute.php" method="post">
+<form action="register_execute2.php" method="post">
 <table id="table">
     <tr>
 	<td>ユーザー名: <input type="text" name="name" value="" /></td>

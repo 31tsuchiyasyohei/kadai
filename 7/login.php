@@ -8,7 +8,7 @@ session_start();
 <head>
 </head>
 <body>
-<form action="login_execute.php" method="post">
+<form action="login_check.php" method="post">
 <table id="table">
     <tr>
 	<td>ログイン名: <input type="text" name="name" value="" /></td>

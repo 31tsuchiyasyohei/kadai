@@ -4,7 +4,7 @@ $password = $_POST["password"];
 $gender = $_POST["gender"];
 $age = $_POST["age"];
 $pdo = new PDO("mysql:host=localhost;dbname=cs_academy;charset=utf8", "root", "");
-$sql = "INSERT INTO `register`(`id`, `username`, `password`, `gender`, `age`) VALUES (``,`$name`,`$password`,`$gender`,`$age`)";
+$sql = "INSERT INTO `register`(`id`, `username`, `password`, `gender`, `age`) VALUES (NULL, $name ,`$password`,`$gender`,`$age`)";
 
 var_dump($sql);
 $stmt = $pdo->prepare($sql);
