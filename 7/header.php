@@ -30,11 +30,11 @@ echo $_SESSION["register_id"];
 <li><a href="#">RANKING</a></li>
 <li><a href="index_top.php">TOP</a></li>
 <li><a href="index_economy.php">経済</a></li>
-<li><a href="#">スポーツ</a></li>
-<li><a href="#">エンタメ</a></li>
-<li><a href="#">IT</a></li>
-<li><a href="#">その他</a></li>
-<li><a href="#">履歴</a></li>
+<li><a href="index_sport.php">スポーツ</a></li>
+<li><a href="index_entame.php">エンタメ</a></li>
+<li><a href="index_it.php">IT</a></li>
+<li><a href="index_other.php">その他</a></li>
+<li><a href="index_log.php">履歴</a></li>
 </ul>
 </div>
 </header>

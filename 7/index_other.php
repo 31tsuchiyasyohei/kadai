@@ -12,7 +12,7 @@ echo "<br />hello";
 
 $pdo = new PDO("mysql:host=mysql518.db.sakura.ne.jp;dbname=tsuchiya0909_test;charset=utf8", "tsuchiya0909", "test0909");
 //echo $pdo;
-$category='経済';
+$category='その他';
 //var_dump($_POST["category"])
 /*
 if(isset($_POST["category"])){

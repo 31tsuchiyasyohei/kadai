@@ -3,7 +3,8 @@ session_start();
 include("header.php"); ?> 
 <?php
 $pdo = new PDO("mysql:host=mysql518.db.sakura.ne.jp;dbname=tsuchiya0909_test;charset=utf8", "tsuchiya0909", "test0909");
-$sql = "SELECT *FROM news";
+$register_id = $_SESSION["register_id"];
+$sql = "SELECT *FROM log where register_id = '".$register_id."'";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);  
